@@ -1,0 +1,66 @@
+{% extends "index.html" %}
+{% block content %}
+{% load static %}
+<br>
+      <div class="famous_temples_container container">
+            <title>{% block title %}famous_temples -{{block.super}}{% endblock title %}</title>
+            <link rel="stylesheet" href="{% static "css/famous_temples.css" %}">
+            <h1 class="famous_temples_header"><b><u>Famous Temples in Tirupati</u></b>:-</h1><br>
+            <div class="row temples_row">
+                  <div class="card" style="width: 18rem;" >
+                        <a href="{% url "Sri_Venkateswara_Temple" %}" class="text-decoration-none text-dark">
+                        <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcT-PB471S71vdehNneoBeiKvBnh7z8lNVl1nH1_dTplXqhi_eNbh0vA9Ce7AJRV3puefrHFQjJt8DvHgbB9KliRD0BbFKXmmO4DHI5C_g" class="card-img-top" alt="...">
+                        <div class="card-body">
+                              <h5 class="card-title">Sri_Venkateswara_Temple</h5>
+                              <p class="card-text">Tirumala or Tirumalai is a Hindu religious temple town in Tirupati district of the Indian state of Andhra Pradesh. It is one of the neighbourhoods of the Tirupati city.</p>
+                              <a href="https://maps.app.goo.gl/bTqSEAa6uZSRgSBs6" target="_blank" class="btn btn-primary my-3 ">Location</a>
+                        </div>
+                        </a>
+                  </div>
+                  <div class="card" style="width: 18rem;">
+                        <a href="{% url "sri_padmavathi_temple" %}" class="text-decoration-none text-dark">
+                        <img src="https://assets.traveltriangle.com/blog/wp-content/uploads/2021/06/Padmavati_ammavari_koneru_at_tirucanuru_tirupati.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                              <h5 class="card-title">Sri Padmavati Temple (Tiruchanur)</h5>
+                              <p class="card-text">The list of Hindu temples in Tirupati is incomplete without mentioning Padmavathi Temple. A pearly white five-story tower forms the fascinating entrance to this divine temple.</p>
+                              <a href="https://maps.app.goo.gl/m9AE5sDndZSB4ZRE8" target="_blank" class="btn btn-primary">Location</a>
+                        </div>
+                        </a>
+                  </div>
+                  <div class="card" style="width: 18rem;">
+                        <a href="{% url "govindhrajula_temple" %}" class="text-decoration-none text-dark">
+                        <img src="https://i.pinimg.com/736x/de/f7/55/def755513c2bf331bb1df29ba07f62e6.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                              <h5 class="card-title">Govindaraja Temple</h5>
+                              <p class="card-text">Sri Govindarajaswamy Temple is an ancient Hindu Vaishnavite temple situated in the heart of Tirupati city in Tirupati district of Andhra Pradesh in India.</p>
+                              <a href="https://maps.app.goo.gl/woqbGcK1BY42JRFe8" target="_blank" class="btn btn-primary">Location</a>
+                        </div>
+                        </a>
+                  </div>
+                  <div class="card" style="width: 18rem;">
+                        <a href="{% url "kapileswara_temple" %}" class="text-decoration-none text-dark">
+                        <img src="https://www.godigit.com/content/dam/godigit/directportal/en/kapilar-theertham.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                              <h5 class="card-title">Kapileswara Temple</h5>
+                              <p class="card-text">Kapila Theertham is the holy water falls in Tirupati named after Kapila Muni. It hosts Kapileswara Temple which is dedicated to Lord Shiva and the deity is referred to as Kapileswara.</p>
+                              <a href="https://maps.app.goo.gl/g63AUWfm6doXu3yX8" target="_blank" class="btn btn-primary">Location</a>
+                        </div>
+                        </a>
+                  </div>
+                  <div class="card" style="width: 18rem;">
+                        <a href="{% url "sri_kalyana_venkateswara_temple" %}" class="text-decoration-none text-dark">
+
+                        <img src="https://www.godigit.com/content/dam/godigit/directportal/en/kalyana-venkateswara-temple.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                              <h5 class="card-title">Sri Kalyana Venkateswara Temple</h5>
+                              <p class="card-text">This temple is at a distance of 12 km from Tirupati. It is believed that Lord Venkateswara stayed here for 6 months after marriage, before moving to Tirumala.</p>
+                              <a href="https://maps.app.goo.gl/azzpXQ68JVMRthCFA" target="_blank" class="btn btn-primary">Location</a>
+                        </div>
+                        </a>
+                  </div>
+            </div>
+      </div>
+{% endblock content %}
+{% comment %} {% block Sri_Venkateswara_Temple %}
+
+{% endblock Sri_Venkateswara_Temple %} {% endcomment %}

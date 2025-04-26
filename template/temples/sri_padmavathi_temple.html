@@ -1,0 +1,36 @@
+{% extends "famous_temples.html" %}
+{% block content %}
+{% load static %}
+<title>{% block title %}Sri Padmavati Temple - {{ block.super }}{% endblock title %}</title>
+<link rel="stylesheet" href="{% static 'css/temples.css' %}">
+<div class="temple-hero">
+    <img src="https://assets.traveltriangle.com/blog/wp-content/uploads/2021/06/Padmavati_ammavari_koneru_at_tirucanuru_tirupati.jpg" 
+         alt="Sri Padmavati Temple" class="hero-image">
+    <div class="hero-overlay">
+        <h1 class="hero-title">Sri Padmavati Temple</h1>
+        <p class="hero-subtitle">A divine destination in Tiruchanur</p>
+    </div>
+</div>
+
+<div class="temple-content">
+    <p>
+        The list of Hindu temples in Tirupati is incomplete without mentioning Padmavathi Temple. 
+        A pearly white five-story tower forms the fascinating entrance to this divine temple.
+    </p>
+    <div class="temple-buttons">
+        <a href="https://maps.app.goo.gl/m9AE5sDndZSB4ZRE8" target="_blank" class="btn btn-primary">View Location</a>
+        <a href="{% url 'famous_temples' %}" class="btn btn-secondary">Back</a>
+    </div>
+</div>
+{% comment %} <title>{% block title %}sri venkateswara temple -{{block.super}}{% endblock title %}</title>
+    <div class="card" style="width: 18rem;">
+        <img src="https://assets.traveltriangle.com/blog/wp-content/uploads/2021/06/Padmavati_ammavari_koneru_at_tirucanuru_tirupati.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+              <h5 class="card-title">Sri Padmavati Temple (Tiruchanur)</h5>
+              <p class="card-text">The list of Hindu temples in Tirupati is incomplete without mentioning Padmavathi Temple. A pearly white five-story tower forms the fascinating entrance to this divine temple.</p>
+              {% comment %} <a href="https://maps.app.goo.gl/m9AE5sDndZSB4ZRE8" class="btn btn-primary">Location</a> 
+            <a href="https://maps.app.goo.gl/m9AE5sDndZSB4ZRE8" target="_blank" class="btn btn-primary">Location</a>
+            </div>
+        <a href="{% url "famous_temples" %}" class="btn btn-primary m-2">Back</a>
+    </div> {% endcomment %}
+{% endblock content %}

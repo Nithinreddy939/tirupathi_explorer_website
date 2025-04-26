@@ -1,0 +1,26 @@
+{% extends "famous_temples.html" %}
+{% block content %}
+{% load static %}
+<title>{% block title %}Kapileswara Temple - {{ block.super }}{% endblock title %}</title>
+<link rel="stylesheet" href="{% static 'css/temples.css' %}">
+<div class="temple-hero">
+    <img src="https://www.godigit.com/content/dam/godigit/directportal/en/kapilar-theertham.jpg" 
+         alt="Kapileswara Temple" class="hero-image">
+    <div class="hero-overlay">
+        <h1 class="hero-title">Kapileswara Temple</h1>
+        <p class="hero-subtitle">A sacred temple dedicated to Lord Shiva in Tirupati</p>
+    </div>
+</div>
+
+<div class="temple-content">
+    <p>
+        Kapila Theertham is the holy waterfall in Tirupati named after Kapila Muni. It hosts the Kapileswara Temple, 
+        which is dedicated to Lord Shiva. The deity is referred to as Kapileswara, and the temple is a significant 
+        pilgrimage site for devotees.
+    </p>
+    <div class="temple-buttons">
+        <a href="https://maps.app.goo.gl/g63AUWfm6doXu3yX8" target="_blank" class="btn btn-primary">View Location</a>
+        <a href="{% url 'famous_temples' %}" class="btn btn-secondary">Back</a>
+    </div>
+</div>
+{% endblock content %}

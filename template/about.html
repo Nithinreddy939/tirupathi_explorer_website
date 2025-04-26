@@ -1,0 +1,45 @@
+{% extends "index.html" %}
+{% load static %}
+
+
+{% block title %}About Us{% endblock title %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static "css/about.css" %}">
+<div class="container about-container">
+    <h2 class="text-center about-header">About Tirupati Explorer</h2>
+    <p class="text-center about-text">
+        Tirupati Explorer is your digital companion to one of India’s most sacred and culturally rich cities.
+        We are passionate about sharing the divine energy, flavorful cuisine, and timeless stories that make Tirupati a spiritual haven for millions.
+    </p>
+
+    <div class="row mt-5">
+        <div class="col-md-6">
+            <h3 class="section-title">Our Vision</h3>
+            <p class="about-text">
+                Our goal is to preserve and promote the spiritual and cultural legacy of Tirupati. We believe that travel is more than just visiting places — it's about connecting with history, tradition, and local life.
+            </p>
+        </div>
+        <div class="col-md-6">
+            <h3 class="section-title">What We Do</h3>
+            <p class="about-text">
+                We offer curated information on Tirupati's most revered temples and beloved local dishes. From temple timings to traditional recipes, we bring you authentic insights to make your journey meaningful.
+            </p>
+        </div>
+    </div>
+
+    <div class="highlight-box">
+        <h4 class="section-title">Why Visit Tirupati?</h4>
+        <p class="about-text">
+            Tirupati is not just a city — it's a pilgrimage of the soul. With architectural marvels like the Sri Venkateswara Temple and vibrant street food culture, it offers a blend of devotion and delight. Whether you're seeking blessings or a deeper cultural experience, Tirupati welcomes you.
+        </p>
+    </div>
+
+    <div class="mt-5">
+        <h3 class="section-title">Meet the Team</h3>
+        <p class="about-text">
+            We’re a group of developers, storytellers, and Tirupati natives passionate about showcasing the city’s treasures. Our work is driven by love for our heritage and a desire to make Tirupati more accessible to all.
+        </p>
+    </div>
+</div>
+{% endblock content %}

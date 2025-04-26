@@ -1,0 +1,25 @@
+{% extends "famous_temples.html" %}
+{% block content %}
+{% load static %}
+<title>{% block title %}Sri Venkateswara Temple - {{ block.super }}{% endblock title %}</title>
+<link rel="stylesheet" href="{% static 'css/temples.css' %}">
+<div class="temple-hero">
+    <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcT-PB471S71vdehNneoBeiKvBnh7z8lNVl1nH1_dTplXqhi_eNbh0vA9Ce7AJRV3puefrHFQjJt8DvHgbB9KliRD0BbFKXmmO4DHI5C_g" 
+         alt="Sri Venkateswara Temple" class="hero-image">
+    <div class="hero-overlay">
+        <h1 class="hero-title">Sri Venkateswara Temple</h1>
+        <p class="hero-subtitle">A sacred temple located in the holy town of Tirumala</p>
+    </div>
+</div>
+
+<div class="temple-content">
+    <p>
+        Tirumala or Tirumalai is a Hindu religious temple town in Tirupati district of the Indian state of Andhra Pradesh. 
+        It is one of the most revered temples in India, attracting millions of devotees every year.
+    </p>
+    <div class="temple-buttons">
+        <a href="https://maps.app.goo.gl/bTqSEAa6uZSRgSBs6" target="_blank" class="btn btn-primary">View Location</a>
+        <a href="{% url 'famous_temples' %}" class="btn btn-secondary">Back</a>
+    </div>
+</div>
+{% endblock content %}

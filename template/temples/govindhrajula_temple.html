@@ -1,0 +1,26 @@
+{% extends "famous_temples.html" %}
+{% block content %}
+{% load static %}
+<title>{% block title %}Govindaraja Temple - {{ block.super }}{% endblock title %}</title>
+<link rel="stylesheet" href="{% static 'css/temples.css' %}">
+<div class="temple-hero">
+    <img src="https://i.pinimg.com/736x/de/f7/55/def755513c2bf331bb1df29ba07f62e6.jpg" 
+         alt="Govindaraja Temple" class="hero-image">
+    <div class="hero-overlay">
+        <h1 class="hero-title">Govindaraja Temple</h1>
+        <p class="hero-subtitle">An ancient Vaishnavite temple in the heart of Tirupati</p>
+    </div>
+</div>
+
+<div class="temple-content">
+    <p>
+        Sri Govindarajaswamy Temple is an ancient Hindu Vaishnavite temple situated in the heart of Tirupati city 
+        in Tirupati district of Andhra Pradesh in India. It is one of the most important temples in the region, 
+        known for its historical and spiritual significance.
+    </p>
+    <div class="temple-buttons">
+        <a href="https://maps.app.goo.gl/woqbGcK1BY42JRFe8" target="_blank" class="btn btn-primary">View Location</a>
+        <a href="{% url 'famous_temples' %}" class="btn btn-secondary">Back</a>
+    </div>
+</div>
+{% endblock content %}

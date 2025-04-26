@@ -1,0 +1,96 @@
+{% comment %} 
+{% extends "index.html" %}
+{% block content %} {% endcomment %}
+{% load static %}
+<link rel="stylesheet" href="{% static "css/home_page.css" %}">
+<div class="tirupati-home">
+    <!-- Hero Section -->
+    <section class="tirupati-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    {% comment %} <img src="{% static 'images/tirupati_logo.png' %}" alt="Tirupati Logo" class="hero-logo"> {% endcomment %}
+                    Tirupati Vlog
+                </h1>
+                <p class="hero-subtitle">Discover the divine flavors and sacred sites of Tirupati</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="tirupati-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="content-card">
+                        <hr class="divider">
+                        <div class="content-body">
+                            <h2>Temples</h2>
+                            <div class="content-sub-body">
+                                <div class="temples-section">
+                                    <h3>Temples of Tirupati</h3>
+                                    <p>Explore the sacred sites of Tirupati, renowned for their divine atmosphere and historical significance.</p>
+                                    <p>Experience the spiritual essence of this holy city through its majestic temples and rituals.</p>
+                                    
+                                    <a href="{% url "famous_temples" %}" class="btn btn-outline-dark">Explore</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="image-gallery">
+                            <div class="content-card">
+                                <hr class="divider">
+                                <div class="content-body">
+                                    <h2>Food</h2>
+                                    <div class="content-sub-body">
+                                        <div class="food-section">
+                                            <h3>Flavors of Tirupati</h3>
+                                            <p>Discover the local cuisine that reflects the traditions and culture of Tirupati.</p>
+                                            <p>Join us on a journey through flavorful dishes, offered both in the city and as temple prasadam.</p>
+                                            <a href="" class="btn btn-outline-dark">Explore</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        {% comment %} <img src="{% static 'images/tirupati-temple.jpg' %}" alt="Tirupati Temple" class="img-fluid rounded">
+                        <img src="{% static 'images/tirupati-food.jpg' %}" alt="Tirupati Food" class="img-fluid rounded mt-3">
+                    </div> {% endcomment %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Sections -->
+    <section class="tirupati-features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Local Cuisine</h3>
+                    <p>Explore Tirupati's unique food culture and traditional recipes</p>
+                </div>
+                <div class="col-md-4 feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-temple"></i>
+                    </div>
+                    <h3>Sacred Temples</h3>
+                    <p>Discover the spiritual significance of Tirupati's holy sites</p>
+                </div>
+                <div class="col-md-4 feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h3>Rich Heritage</h3>
+                    <p>Learn about the centuries-old traditions of this divine city</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+    
+{% comment %} {% endblock content %} {% endcomment %}

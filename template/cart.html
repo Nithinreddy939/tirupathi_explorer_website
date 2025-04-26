@@ -1,0 +1,163 @@
+{% extends "index.html" %}
+{% block content %}
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/cart.css" %}">
+    <div class="cart-container">
+        <h2 class="cart-header">Food Item Cart</h2>
+        
+        <div class="row">
+            <div class="col-lg-8">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <!-- Sample Item 1 -->
+                    <div class="cart-item">
+                        <div class="row align-items-center">
+                            <div class="col-md-2">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSN0Rld40nSy6K0HvTgK-iOwL7G-0lMOCJ5nQ&s" alt="Pulihora" class="item-image">
+                            </div>
+                            <div class="col-md-4">
+                                <h5 class="item-name">Tirupati Pulihora</h5>
+                                <p class="item-description text-muted mb-0">Traditional tamarind rice with special spices</p>
+                            </div>
+                            <div class="col-md-2">
+                                <span class="item-price">₹80</span>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="quantity-control">
+                                    <button class="quantity-btn">-</button>
+                                    <input type="number" class="quantity-input" value="2" min="1">
+                                    <button class="quantity-btn">+</button>
+                                </div>
+                            </div>
+                            <div class="col-md-2 text-end">
+                                <i class="fas fa-trash remove-btn"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sample Item 2 -->
+                    <div class="cart-item">
+                        <div class="row align-items-center">
+                            <div class="col-md-2">
+                                <img src="https://i.pinimg.com/736x/ad/c5/95/adc5953af7c24829777f5d367300fa75.jpg" alt="Laddu" class="item-image">
+                            </div>
+                            <div class="col-md-4">
+                                <h5 class="item-name">Tirupati Laddu</h5>
+                                <p class="item-description text-muted mb-0">Famous sweet from Tirumala temple</p>
+                            </div>
+                            <div class="col-md-2">
+                                <span class="item-price">₹50</span>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="quantity-control">
+                                    <button class="quantity-btn">-</button>
+                                    <input type="number" class="quantity-input" value="1" min="1">
+                                    <button class="quantity-btn">+</button>
+                                </div>
+                            </div>
+                            <div class="col-md-2 text-end">
+                                <i class="fas fa-trash remove-btn"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sample Item 3 -->
+                    <div class="cart-item">
+                        <div class="row align-items-center">
+                            <div class="col-md-2">
+                                <img src="https://i.pinimg.com/736x/36/26/46/362646d1dd581b63ab954e3580c9df7a.jpg" alt="Dosa" class="item-image">
+                            </div>
+                            <div class="col-md-4">
+                                <h5 class="item-name">Street Style Dosa</h5>
+                                <p class="item-description text-muted mb-0">Crispy dosa with special chutney</p>
+                            </div>
+                            <div class="col-md-2">
+                                <span class="item-price">₹60</span>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="quantity-control">
+                                    <button class="quantity-btn">-</button>
+                                    <input type="number" class="quantity-input" value="1" min="1">
+                                    <button class="quantity-btn">+</button>
+                                </div>
+                            </div>
+                            <div class="col-md-2 text-end">
+                                <i class="fas fa-trash remove-btn"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Empty Cart State (hidden by default) -->
+                <div class="empty-cart">
+                    <i class="fas fa-shopping-cart empty-cart-icon"></i>
+                    <h3>Your cart is empty</h3>
+                    <p>Looks like you haven't added anything to your cart yet</p>
+                    <a href="{% url "index" %}" class="btn continue-shopping">Continue Shopping</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="summary-card">
+                    <h5 class="summary-title">Order Summary</h5>
+                    
+                    <div class="summary-item">
+                        <span>Subtotal (4 items)</span>
+                        <span>₹270.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Delivery Fee</span>
+                        <span>₹30.00</span>
+                    </div>
+                    <div class="summary-item">
+                        <span>Tax</span>
+                        <span>₹24.30</span>
+                    </div>
+                    
+                    <div class="summary-item total">
+                        <span>Total</span>
+                        <span>₹324.30</span>
+                    </div>
+                    
+                    <button class="checkout-btn">Proceed to Checkout</button>
+                    
+                    <div class="mt-3 text-center">
+                        <small class="text-muted">or</small>
+                        <a href="{% url "index" %}" class="d-block mt-2">Continue Shopping</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Quantity control functionality
+        document.querySelectorAll('.quantity-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const input = this.parentNode.querySelector('.quantity-input');
+                let value = parseInt(input.value);
+                
+                if (this.textContent === '+' && value < 10) {
+                    input.value = value + 1;
+                } else if (this.textContent === '-' && value > 1) {
+                    input.value = value - 1;
+                }
+                
+                // Here you would update the cart total via AJAX
+            });
+        });
+        
+        // Remove item functionality
+        document.querySelectorAll('.remove-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const cartItem = this.closest('.cart-item');
+                cartItem.style.animation = 'fadeOut 0.3s ease';
+                setTimeout(() => {
+                    cartItem.remove();
+                    // Here you would update the cart total via AJAX
+                }, 300);
+            });
+        });
+    </script>
+{% endblock content %}

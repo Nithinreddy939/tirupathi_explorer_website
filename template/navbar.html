@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static "css/navbar.css" %}">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="https://i.pinimg.com/736x/ad/c5/95/adc5953af7c24829777f5d367300fa75.jpg" alt="food vlog image" class="navbar_image"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="{% url "index" %}">Home</a>
+              </li>
+            
+            <li class="nav-item">
+              <a class="nav-link active" href="{% url "famous_temples" %}">Famous Temples</a>
+            </li>
+              
+
+              {% comment %} street food items in tirupati {% endcomment %}
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Items
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+              </li>
+
+              {% comment %} orders from this website {% endcomment %}
+
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Orders
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="{% url "about" %}" >About website</a>
+              </li>
+            </ul>
+            {% comment %} <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form> {% endcomment %}
+          </div>
+          <div class="loginbtns">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 auth-cart-nav">
+              <!-- Cart Button -->
+              <li class="nav-item">
+                <a class="nav-link cart-btn" href="{% url "cart" %}">🛒 Cart</a>
+              </li>
+            
+              {% if user.is_authenticated %}
+                <!-- Profile -->
+                <li class="nav-item">
+                  <a class="nav-link profile-btn" 👤 {{ user.username }}></a>
+                </li>
+                <!-- Logout -->
+                <li class="nav-item">
+                  <a class="nav-link logout-btn" href="{% url "logout" %}"> Sign Out</a>
+                </li>
+              {% else %}
+                <!-- Sign In -->
+                <li class="nav-item">
+                  <a class="nav-link signin-btn" href="{% url "signin" %}"> Sign In</a>
+                </li>
+                <!-- Sign Up -->
+                <li class="nav-item">
+                  <a class="nav-link signup-btn" href="{% url "signup" %}"> Sign Up</a>
+                </li>
+              {% endif %}
+            </ul>  
+          </div>      
+        </div>
+        
+        
+      </nav>
+      
+</body>
+</html>
