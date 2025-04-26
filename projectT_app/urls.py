@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     path('', views.index, name='index'),
     path('about_website/', views.about, name='about'),
@@ -16,3 +17,4 @@ urlpatterns = [
     path('Kapileswara_temple/',views.temple_4,name='kapileswara_temple'),
     path('sri_kalyana_venkateswara_temple/',views.temple_5,name='sri_kalyana_venkateswara_temple'),
 ]
+urlpatterns += staticfiles_urlpatterns()
