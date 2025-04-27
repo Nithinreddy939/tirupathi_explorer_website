@@ -1,6 +1,6 @@
-.navbar_image{
-    width: 150px;
-    height: 150px;
+/* .navbar_image{
+    width: 130px;
+    height: 130px;
     border: 0caption;
     margin: 0 auto;
     display: block;
@@ -25,10 +25,10 @@
     text-decoration: none;
     font-size: 16px;
     transition: color 0.3s ease;
-} */
+} 
 .auth-cart-nav .nav-link {
     color: #fff;
-    /* padding: 8px 8px; */
+    
     margin: 2px;
     border-radius: 8px;
     transition: background 0.3s ease;
@@ -52,4 +52,66 @@
         margin-bottom: 5px;
         text-align: left;
     }
+} */
+/* Navbar styling */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-image {
+    height: 80px;
+    width: auto;
+    border-radius: 4px;
+    border-radius: 20px;
+}
+
+/* Mobile menu styling */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        padding: 15px;
+        background-color: #343a40;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    
+    .nav-item {
+        margin-bottom: 8px;
+    }
+    
+    .dropdown-menu {
+        background-color: #495057;
+    }
+    
+    .dropdown-item {
+        color: rgba(255, 255, 255, 0.8);
+    }
+    
+    .dropdown-item:hover {
+        background-color: #6c757d;
+        color: white;
+    }
+}
+
+/* Cart badge styling */
+.cart-count {
+    font-size: 0.6rem;
+    vertical-align: top;
+    margin-left: 2px;
+}
+
+/* Auth buttons styling */
+.signin-btn, .signup-btn {
+    transition: all 0.3s ease;
+}
+
+.signin-btn:hover {
+    color: #4da6ff !important;
+}
+
+.signup-btn:hover {
+    color: #6fdc6f !important;
+}
+
+.profile-btn {
+    cursor: pointer;
 }

@@ -1,11 +1,11 @@
-{% load static %}
+{% comment %} {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock title %}</title>
-    <link rel="stylesheet" href="{% static "css/navbar.css" %}">
+    <link rel="stylesheet" href="{% static "css/navbar_page.css" %}">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -25,7 +25,7 @@
             </li>
               
 
-              {% comment %} street food items in tirupati {% endcomment %}
+              {% comment %} street food items in tirupati 
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -39,7 +39,7 @@
                   </ul>
               </li>
 
-              {% comment %} orders from this website {% endcomment %}
+              {% comment %} orders from this website 
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -56,10 +56,10 @@
                 <a class="nav-link active" href="{% url "about" %}" >About website</a>
               </li>
             </ul>
-            {% comment %} <form class="d-flex" role="search">
+             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
-            </form> {% endcomment %}
+            </form> 
           </div>
           <div class="loginbtns">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0 auth-cart-nav">
@@ -94,5 +94,174 @@
          
       </nav>
       
+</body>
+</html> {% endcomment %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+</head>
+<body>
+  
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://i.pinimg.com/736x/ad/c5/95/adc5953af7c24829777f5d367300fa75.jpg" 
+                     alt="food vlog image" 
+                     class="navbar-image img-fluid">
+            </a>
+            <button class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarContent" 
+                    aria-controls="navbarContent" 
+                    aria-expanded="false" 
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <!-- Main Navigation -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'index' %}">
+                            <i class="fas fa-home d-lg-none me-2"></i>Home
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'famous_temples' %}">
+                            <i class="fas fa-landmark d-lg-none me-2"></i>Famous Temples
+                        </a>
+                    </li>
+                    
+                    <!-- Food Items Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" 
+                           href="" 
+                           id="foodItemsDropdown" 
+                           role="button" 
+                           data-bs-toggle="dropdown" 
+                           aria-expanded="false">
+                            <i class="fas fa-utensils d-lg-none me-2"></i>Items
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="foodItemsDropdown">
+                            <li><a class="dropdown-item" href="{% url "items" %}">Street Food</a></li>
+                            <li><a class="dropdown-item" href="#">Traditional Dishes</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Special Offers</a></li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Orders Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" 
+                           href="#" 
+                           id="ordersDropdown" 
+                           role="button" 
+                           data-bs-toggle="dropdown" 
+                           aria-expanded="false">
+                            <i class="fas fa-shopping-bag d-lg-none me-2"></i>Orders
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="ordersDropdown">
+                            <li><a class="dropdown-item" href="#">Current Orders</a></li>
+                            <li><a class="dropdown-item" href="#">Order History</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Track Order</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'about' %}">
+                            <i class="fas fa-info-circle d-lg-none me-2"></i>About
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Auth and Cart Section -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <!-- Cart Button -->
+                    <li class="nav-item">
+                        <a class="nav-link cart-btn" href="{% url 'cart' %}">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="d-none d-lg-inline"> Cart</span>
+                            <span class="badge bg-danger rounded-pill cart-count">0</span>
+                        </a>
+                    </li>
+                    
+                    {% if user.is_authenticated %}
+                        <!-- Profile -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle profile-btn" 
+                               href="#" 
+                               id="profileDropdown" 
+                               role="button" 
+                               data-bs-toggle="dropdown" 
+                               aria-expanded="false">
+                                <i class="fas fa-user"></i>
+                                <span class="d-none d-lg-inline">{{ user.username }}</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                                <li><a class="dropdown-item" href="#">My Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="{% url 'logout' %}">Sign Out</a></li>
+                            </ul>
+                        </li>
+                    {% else %}
+                        <!-- Sign In -->
+                        <li class="nav-item">
+                            <a class="nav-link signin-btn" href="{% url 'signin' %}">
+                                <i class="fas fa-sign-in-alt d-lg-none me-2"></i>Sign In
+                            </a>
+                        </li>
+                        <!-- Sign Up -->
+                        <li class="nav-item">
+                            <a class="nav-link signup-btn" href="{% url 'signup' %}">
+                                <i class="fas fa-user-plus d-lg-none me-2"></i>Sign Up
+                            </a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Mobile menu enhancement - close after click
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarContent = document.getElementById('navbarContent');
+            
+            // Close navbar when clicking on a nav link (for mobile)
+            const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle)');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth < 992) { // Bootstrap's lg breakpoint
+                        const bsCollapse = new bootstrap.Collapse(navbarContent);
+                        bsCollapse.hide();
+                    }
+                });
+            });
+            
+            // Update cart count (example - you would replace with your actual cart logic)
+            function updateCartCount() {
+                // This is just a placeholder - replace with your actual cart count logic
+                const cartCount = localStorage.getItem('cartCount') || 0;
+                document.querySelector('.cart-count').textContent = cartCount;
+            }
+            
+            updateCartCount();
+        });
+    </script>
 </body>
 </html>

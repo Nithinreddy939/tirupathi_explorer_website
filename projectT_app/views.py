@@ -13,6 +13,9 @@ def index(request):
 @login_required(login_url='signin')
 def about(request):
     return render(request, 'about.html')
+@login_required(login_url='signin')
+def items(request):
+    return render(request, 'items.html')
 
 # login and signup pages
 def signin(request):
