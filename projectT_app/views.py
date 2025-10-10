@@ -10,10 +10,10 @@ from django.core.validators import validate_email
 
 def index(request):
     return render(request, 'index.html')
-@login_required(login_url='signin')
+# @login_required(login_url='signin')
 def about(request):
     return render(request, 'about.html')
-@login_required(login_url='signin')
+# @login_required(login_url='signin')
 def items(request):
     return render(request, 'items.html')
 
@@ -68,7 +68,7 @@ def cart(request):
     return render(request, 'cart.html')
 
 # Temples pages
-@login_required(login_url='signin')
+# @login_required(login_url='signin')
 def famous_temples(request):
     return render(request, 'famous_temples.html')
 def temple_1(request):
