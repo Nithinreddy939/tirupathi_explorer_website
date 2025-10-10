@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+<title>Settings</title>
+
+<link rel="stylesheet" href="{% static 'css/setting.css' %}">
+
+<div class="settings-container">
+    <div class="settings-card">
+        <div class="settings-header">
+            <h2>Account Settings</h2>
+            <p>Manage your account details and preferences</p>
+        </div>
+        <div class="settings-body">
+            <div class="settings-section">
+                <h3>Personal Information</h3>
+                <ul class="settings-details">
+                    <li><strong>Username:</strong> {{ user.username }}</li>
+                    <li><strong>Email:</strong> {{ user.email }}</li>
+                    <li><strong>Date Joined:</strong> {{ user.date_joined|date:"F j, Y" }}</li>
+                </ul>
+                <a href="" class="btn btn-primary">Update Profile</a>
+            </div>
+            <hr>
+            <div class="settings-section">
+                <h3>Security</h3>
+                <p>Change your password to keep your account secure.</p>
+                <a href="" class="btn btn-secondary">Change Password</a>
+            </div>
+            <hr>
+            <div class="settings-section">
+                <h3>Preferences</h3>
+                <p>Customize your account preferences.</p>
+                <a href="#" class="btn btn-outline-dark">Manage Preferences</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

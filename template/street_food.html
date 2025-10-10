@@ -1,0 +1,80 @@
+{% extends "index.html" %}
+{% load static %}   
+{% block content %}
+<title>Street Food in Tirupati</title>
+
+<link rel="stylesheet" href="{% static 'css/street_food.css' %}">
+
+<!-- Header Section -->
+<div class="header-section text-center">
+    <h1><i class="fas fa-utensils"></i> Tirupati Street Food</h1>
+    <p class="lead">Discover the mouth-watering street food of Tirupati</p>
+</div>
+
+<!-- Category Filter -->
+<div class="container mb-4 text-center">
+    <div class="btn-group flex-wrap" id="categoryFilter">
+        <button class="btn btn-outline-primary category-btn active" data-category="all">All Items</button>
+        {% for category in categories %}
+            <button class="btn btn-outline-primary category-btn" data-category="{{ category.id }}">
+                {{ category.name }}
+            </button>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Food Items Grid -->
+<div class="container">
+    <div class="row" id="foodContainer">
+        {% for item in food_items %}
+            <div class="col-lg-4 col-md-6 mb-4" data-category="{{ item.category.id }}">
+                <div class="food-card card">
+                    {% if item.image %}
+                        <img src="{{ item.image.url }}" class="food-img card-img-top" alt="{{ item.name }}">
+                    {% else %}
+                        <img src="{% static 'images/default_food.jpg' %}" class="food-img card-img-top" alt="{{ item.name }}">
+                    {% endif %}
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item.name }}</h5>
+                        <p class="card-text">{{ item.description }}</p>
+                        <span class="badge bg-warning text-dark">{{ item.category.name }}</span>
+                    </div>
+                </div>
+            </div>
+        {% empty %}
+            <div class="col-12">
+                <div class="no-food text-center">
+                    <i class="fas fa-utensils fa-3x mb-3"></i>
+                    <h3>No food items found</h3>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Filter Functionality -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const categoryButtons = document.querySelectorAll(".category-btn");
+        const foodItems = document.querySelectorAll("[data-category]");
+
+        categoryButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                // Update active button
+                categoryButtons.forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+
+                // Filter items
+                const category = button.getAttribute("data-category");
+                foodItems.forEach(item => {
+                    if (category === "all" || item.getAttribute("data-category") === category) {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+            });
+        });
+    });
+</script>
+{% endblock content %}

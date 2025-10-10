@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+<title>My Profile</title>
+
+
+<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+
+<div class="profile-container">
+    <div class="profile-card">
+        <div class="profile-header">
+            <img src="{% static 'images/tirupati_logo.png' %}" alt="Profile Picture" class="profile-picture">
+            <h2>{{ user.username }}</h2>
+            <p class="profile-email">{{ user.email }}</p>
+        </div>
+        <div class="profile-body">
+            <h3>Account Details</h3>
+            <ul class="profile-details">
+                <li><strong>Username:</strong> {{ user.username }}</li>
+                <li><strong>Email:</strong> {{ user.email }}</li>
+                <li><strong>Date Joined:</strong> {{ user.date_joined|date:"F j, Y" }}</li>
+            </ul>
+            <div class="profile-actions">
+                <a href="" class="btn btn-primary">Update Profile</a>
+                <a href="" class="btn btn-secondary">Change Password</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,122 @@
+.settings-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+.settings-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    width: 100%;
+    padding: 20px;
+}
+
+.settings-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.settings-header h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.settings-header p {
+    font-size: 1rem;
+    color: #777;
+}
+
+.settings-body {
+    margin-top: 20px;
+}
+
+.settings-section {
+    margin-bottom: 20px;
+}
+
+.settings-section h3 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.settings-details {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 15px 0;
+}
+
+.settings-details li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+}
+
+.btn-outline-dark {
+    background-color: transparent;
+    border: 1px solid #333;
+    color: #333;
+}
+
+.btn-outline-dark:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .settings-card {
+        padding: 15px;
+    }
+
+    .settings-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .settings-section h3 {
+        font-size: 1.3rem;
+    }
+
+    .settings-details li {
+        font-size: 0.9rem;
+    }
+}

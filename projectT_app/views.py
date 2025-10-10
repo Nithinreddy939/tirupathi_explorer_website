@@ -17,6 +17,9 @@ def about(request):
 def items(request):
     return render(request, 'items.html')
 
+def street_food(request):
+    return render(request,'street_food.html')
+
 # login and signup pages
 def signin(request):
     if request.method == 'POST':
@@ -59,6 +62,14 @@ def signup(request):
             return redirect('signin')
     else:
         return render(request, 'signup.html')
+    
+
+#myprofile page
+def profile(request):
+    return render(request, 'profile.html')
+#settings page
+def setting(request):
+    return render(request,'setting.html')
     
 def signout(request):
     auth.logout(request)
