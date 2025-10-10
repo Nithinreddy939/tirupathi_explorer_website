@@ -82,7 +82,7 @@ WSGI_APPLICATION = 'projectT.wsgi.application'
 #     }
 # }
 DATABASES= {
-    'default': dj_database_url.parse(os.environ.get('postgresql://tirupati_explorer_user:k4yvEir0QqkBAN6ySb9shHA8qY6m7j2F@dpg-d3kbp8k9c44c73abbo80-a.oregon-postgres.render.com/tirupati_explorer'))
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
 }
 
 
