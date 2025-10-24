@@ -1,0 +1,464 @@
+{% extends "street_food.html" %}
+{% block Snacks %}
+{% for item in food_items %}
+    {% if "Snacks" == item.name %}                                                {% comment "if statement" %}{% endcomment %}
+        <div class="container">
+            <div class="row" id="foodContainer">
+                {% comment %} item1 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} item2 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Vada Pav</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} Item3 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} Item4 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} Item5 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} Item6 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} Item7 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} Item8 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    {% elif "Break Fast Foods" == item.name %}                                          {% comment "elif statement" %}{% endcomment %}
+        <div class="container">
+            <div class="row" id="foodContainer">
+                {% comment %} item1 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} item2 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Vada Pav</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} Item3 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} Item4 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} Item5 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} Item6 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} Item7 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} Item8 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        {% elif "Non-Veg Food" == item.name%}                                        {% comment "elif statement" %}{% endcomment %}
+        <div class="container">
+            <div class="row" id="foodContainer">
+                {% comment %} item1 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} item2 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Vada Pav</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} Item3 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} Item4 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} Item5 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} Item6 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} Item7 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} Item8 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    {% elif "Vegetarian Food" == item.name%}                                       {% comment "elif statement" %}{% endcomment %}
+    <div class="container">
+            <div class="row" id="foodContainer">
+                {% comment %} item1 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} item2 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Vada Pav</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} Item3 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} Item4 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} Item5 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} Item6 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} Item7 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                {% comment %} Item8 {% endcomment %}
+                <div class="col-lg-3 col-md-6 mb-4 " data-category="{{ item.category.id }}">
+                    <div class="food-card card">
+                        <img src="https://i.pinimg.com/736x/6c/1a/37/6c1a37cd4e6f67bb45da3529b887b1fe.jpg" class="food-img card-img-top" style="height:200px" alt="Loading...">
+                        <div class="card-body">
+                            <h5 class="card-title">Samosa</h5>   
+                            <p>Rating:⭐4.2</p>
+                            <a href="" class="btn btn-outline-primary"><small class="text-muted d-block mb-2">{{ item.category.name }}Location </small></a>
+                            <span class="badge bg-warning text-dark">Price : ₨ 1-20</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+    {% endif %}                                                                      {% comment "endif block" %}{% endcomment %}
+
+
+{% endfor %}
+{% endblock Snacks %}
+
+<!-- Filter Functionality -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const categoryButtons = document.querySelectorAll(".category-btn");
+        const foodItems = document.querySelectorAll("[data-category]");
+
+        categoryButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                // Update active button
+                categoryButtons.forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+
+                // Filter items
+                const category = button.getAttribute("data-category");
+                foodItems.forEach(item => {
+                    if (category === "all" || item.getAttribute("data-category") === category) {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+            });
+        });
+    });
+</script>
+{% comment %} <div class="container">
+    <div class="row" id="foodContainer">
+        <div class="col-lg-3 col-md-6 mb-4" data-category="{{ item.category.id }}">
+            <div class="food-card card">
+                <img src="" class="food-img card-img-top" alt="Samosa">
+                <div class="card-body">
+                        <h5 class="card-title">Samosa</h5>   
+                        <p class="card-text">Samosa! Crunchy, savory, and utterly delicious, these tfried or baked pastries are stuffed with spiced potatos, peas, and onions, and are a popular snack in many indian and other country cuisines</p>
+                        <small class="text-muted d-block mb-2">{{ item.category.name }} </small>
+                        
+                        <span class="badge bg-warning text-dark">Price : $1-20</span>
+                        
+                    </div>
+            </div>
+        </div>
+    </div>
+</div> {% endcomment %}
+
+
+

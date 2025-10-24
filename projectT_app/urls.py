@@ -3,8 +3,9 @@ from . import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 urlpatterns = [
     path('', views.index, name='index'),
-    path('items/', views.items, name='items'),
+    path('items/<str:pk>', views.all_items, name='all_items'),
     path('street_food/', views.street_food, name='street_food'),
+    path('items/<int:pk>/', views.item_detail, name='item_detail'),
     path('about_website/', views.about, name='about'),
     path('signin/', views.signin, name='signin'),
     path('signup/', views.signup, name='signup'),
@@ -20,5 +21,8 @@ urlpatterns = [
     path('govindharajula_temple/',views.temple_3,name='govindhrajula_temple'),
     path('Kapileswara_temple/',views.temple_4,name='kapileswara_temple'),
     path('sri_kalyana_venkateswara_temple/',views.temple_5,name='sri_kalyana_venkateswara_temple'),
+   
 ]
 urlpatterns += staticfiles_urlpatterns()
+# if settings.DEBUG:
+#     urlpatterns += static()

@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 from django.core.exceptions import ValidationError
 from django.core.validators import validate_email
+from .models import Tirupathi_data_collection
 # Create your views here.
 
 def index(request):
@@ -14,11 +15,40 @@ def index(request):
 def about(request):
     return render(request, 'about.html')
 # @login_required(login_url='signin')
-def items(request):
-    return render(request, 'items.html')
+def all_items(request,pk):
+    # list all food items (reuse template `all_items.html` or `items.html`)
+    food_items = Tirupathi_data_collection.objects.filter(name=pk)
+    # food_items = Tirupathi_data_collection.objects.all()
+    context = {
+        'food_items': food_items,
+    }
+    return render(request, 'all_items.html', context)
 
 def street_food(request):
-    return render(request,'street_food.html')
+    # Query all food items and derive categories from the category integer field.
+    # Assumption: `category` is stored as an integer and different integers map to category names.
+    # Build a simple category list from existing items.
+    food_items = Tirupathi_data_collection.objects.all()
+    # Build categories as unique ints with a simple name (you may replace with a real Category model later)
+    category_ids = food_items.values_list('category', flat=True).distinct()
+    categories = []
+    for cid in category_ids:
+        categories.append({'id': cid, 'name': f'Category {cid}'})
+
+    context = {
+        'food_items': food_items,
+        'categories': categories,
+    }
+    return render(request,'street_food.html', context)
+
+
+def item_detail(request, pk):
+    # simple detail view for a food item
+    item = Tirupathi_data_collection.objects.filter(pk=pk).first()
+    if not item:
+        messages.error(request, 'Item not found')
+        return redirect('street_food')
+    return render(request, 'all_items.html', {'food_items': [item]})
 
 # login and signup pages
 def signin(request):

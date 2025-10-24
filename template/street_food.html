@@ -11,136 +11,46 @@
     <p class="lead">Discover the mouth-watering street food of Tirupati</p>
 </div>
 
-{% comment %} Items Content {% endcomment %}
-<div class="row" id="foodContainer">
-    <div class="col-lg-3 col-md-6 mb-4" data-category="{{ item.category.id }}">
-            <div class="food-card card">
-                    {% if item.image %}
-                    {% comment %} {{ item.image.url }} {% endcomment %}
-                        <img src="{% static 'images/pani_poori.png' %}" class="food-img card-img-top" alt="{{ item.name }}">
-                    {% else %}
-                        <img src="{% static 'images/pani_poori.png' %}" class="food-img card-img-top" alt="{{ item.name }}">
-                    {% endif %}
-                    <div class="card-body">
-                        {% comment %} {{ item.name }} {% endcomment %}
-                        <h5 class="card-title">Pani Poori</h5>   
-                        {% comment %} {{ item.description }} {% endcomment %}
-                        <p class="card-text">
-                           Crispy, golden hollow puris filled with spiced potato, tangy tamarind chutney and flavored water — a burst of sweet, spicy and tangy in every bite.
-                        </p>
-                        {% comment %} {{ item.category.name }} {% endcomment %}
-                        <small class="text-muted d-block mb-2">Category: 1 </small>
-                        {% comment %} {{ item.category.name }} {% endcomment %}
-                        <span class="badge bg-warning text-dark">spicy food</span>
-                    </div>
-                </div>
-            </div>
-    {% comment %} second item {% endcomment %}
-    <div class="col-lg-3 col-md-6 mb-4" data-category="{{ item.category.id }}">
-                <div class="food-card card">
-                    {% if item.image %}
-                    {% comment %} {{ item.image.url }} {% endcomment %}
-                        <img src="{% static 'images/pani_poori.png' %}" class="food-img card-img-top" alt="{{ item.name }}">
-                    {% else %}
-                        <img src="{% static 'images/pani_poori.png' %}" class="food-img card-img-top" alt="{{ item.name }}">
-                    {% endif %}
-                    <div class="card-body">
-                        {% comment %} {{ item.name }} {% endcomment %}
-                        <h5 class="card-title">Pani Poori</h5>   
-                        {% comment %} {{ item.description }} {% endcomment %}
-                        <p class="card-text">
-                           Crispy, golden hollow puris filled with spiced potato, tangy tamarind chutney and flavored water — a burst of sweet, spicy and tangy in every bite.
-                        </p>
-                        {% comment %} {{ item.category.name }} {% endcomment %}
-                        <small class="text-muted d-block mb-2">Category: 1 </small>
-                        {% comment %} {{ item.category.name }} {% endcomment %}
-                        <span class="badge bg-warning text-dark">Tiffin</span>
-                    </div>
-                </div>
-            </div>
-            {% comment %} third item {% endcomment %}
-            <div class="col-lg-3 col-md-6 mb-4" data-category="{{ item.category.id }}">
-                <div class="food-card card">
-                    {% if item.image %}
-                    {% comment %} {{ item.image.url }} {% endcomment %}
-                        <img src="{% static 'images/pani_poori.png' %}" class="food-img card-img-top" alt="{{ item.name }}">
-                    {% else %}
-                        <img src="{% static 'images/pani_poori.png' %}" class="food-img card-img-top" alt="{{ item.name }}">
-                    {% endif %}
-                    <div class="card-body">
-                        {% comment %} {{ item.name }} {% endcomment %}
-                        <h5 class="card-title">Pani Poori</h5>   
-                        {% comment %} {{ item.description }} {% endcomment %}
-                        <p class="card-text">
-                           Crispy, golden hollow puris filled with spiced potato, tangy tamarind chutney and flavored water — a burst of sweet, spicy and tangy in every bite.
-                        </p>
-                        {% comment %} {{ item.category.name }} {% endcomment %}
-                        <small class="text-muted d-block mb-2">Category: 1 </small>
-                        {% comment %} {{ item.category.name }} {% endcomment %}
-                        <span class="badge bg-warning text-dark">Fast Food</span>
-                    </div>
-                </div>
-        </div>
-        {% comment %} fourth item {% endcomment %}
-         <div class="col-lg-3 col-md-6 mb-4" data-category="{{ item.category.id }}">
-                <div class="food-card card">
-                    {% if item.image %}
-                    {% comment %} {{ item.image.url }} {% endcomment %}
-                        <img src="{% static 'images/pani_poori.png' %}" class="food-img card-img-top" alt="{{ item.name }}">
-                    {% else %}
-                        <img src="{% static 'images/pani_poori.png' %}" class="food-img card-img-top" alt="{{ item.name }}">
-                    {% endif %}
-                    <div class="card-body">
-                        {% comment %} {{ item.name }} {% endcomment %}
-                        <h5 class="card-title">Pani Poori</h5>   
-                        {% comment %} {{ item.description }} {% endcomment %}
-                        <p class="card-text">
-                           Crispy, golden hollow puris filled with spiced potato, tangy tamarind chutney and flavored water — a burst of sweet, spicy and tangy in every bite.
-                        </p>
-                        {% comment %} {{ item.category.name }} {% endcomment %}
-                        <small class="text-muted d-block mb-2">Category: 1 </small>
-                        {% comment %} {{ item.category.name }} {% endcomment %}
-                        <span class="badge bg-warning text-dark">Ice Creams & cooldrinks </span>
-                    </div>
-                </div>
-        </div>
-</div>
+
 
 <!-- Category Filter -->
 <div class="container mb-4 text-center">
     <div class="btn-group flex-wrap" id="categoryFilter">
         <button class="btn btn-outline-primary category-btn active" data-category="all">All Items</button>
-        {% for category in categories %}
+        {% comment %} {% for category in categories %}
             <button class="btn btn-outline-primary category-btn" data-category="{{ category.id }}">
                 {{ category.name }}
             </button>
-        {% endfor %}
+        {% endfor %} {% endcomment %}
     </div>
 </div>
+{% block Snacks %}
+
 
 <!-- Food Items Grid -->
-{% comment %} <div class="container">
+<div class="container">
     <div class="row" id="foodContainer">
         {% for item in food_items %}
-            <div class="col-lg-4 col-md-6 mb-4" data-category="{{ item.category.id }}">
+            <div class="col-lg-3 col-md-6 mb-4" data-category="{{ item.category.id }}">
                 <div class="food-card card">
                     {% if item.image %}
-                    {% comment %} {{ item.image.url }}
-                        <img src="{% static 'images/pani_poori.png' %}" class="food-img card-img-top" alt="{{ item.name }}">
+                    {% comment %} {{ item.image.url }} {% endcomment %}
+                        <img src="{{ item.image.url }}" class="food-img card-img-top" alt="{{ item.name }}">
                     {% else %}
                         <img src="{% static 'images/pani_poori.png' %}" class="food-img card-img-top" alt="{{ item.name }}">
                     {% endif %}
                     <div class="card-body">
-                        {% comment %} {{ item.name }}
-                        <h5 class="card-title">Pani Poori</h5>   
-                        {% comment %} {{ item.description }}
+                        {% comment %} {{ item.name }}{% endcomment %}
+                        <h5 class="card-title">{{ item.name }}</h5>   
+                        {% comment %} {{ item.description }}{% endcomment %}
                         <p class="card-text">
-                           Crispy, golden hollow puris filled with spiced potato, tangy tamarind chutney and flavored water — a burst of sweet, spicy and tangy in every bite.
+                           {{ item.description }}
                         </p>
-                        {% comment %} {{ item.category.name }} 
-                        <small class="text-muted d-block mb-2">Category: 1 </small>
-                        {% comment %} {{ item.category.name }} 
-                        <span class="badge bg-warning text-dark">Spicy Food</span>
+                        {% comment %} {{ item.category.name }} {% endcomment %}
+                        <small class="text-muted d-block mb-2">{{ item.category.name }} </small>
+                        {% comment %} {{ item.category.name }} {% endcomment %}
+                        <span class="badge bg-warning text-dark"></span>
+                        <a href="{% url "all_items" item.name %}" class="btn btn-outline-primary">More</a>
                     </div>
                 </div>
             </div>
@@ -153,8 +63,8 @@
             </div>
         {% endfor %}
     </div>
-</div> {% endcomment %}
-
+</div>
+{% endblock Snacks %}
 <!-- Filter Functionality -->
 <script>
     document.addEventListener("DOMContentLoaded", function () {
