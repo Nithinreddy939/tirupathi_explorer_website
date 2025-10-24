@@ -60,7 +60,29 @@
                   </div>
             </div>
       </div>
-{% endblock content %}
-{% comment %} {% block Sri_Venkateswara_Temple %}
+      <!-- Filter Functionality -->
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const categoryButtons = document.querySelectorAll(".category-btn");
+        const foodItems = document.querySelectorAll("[data-category]");
 
-{% endblock Sri_Venkateswara_Temple %} {% endcomment %}
+        categoryButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                // Update active button
+                categoryButtons.forEach(btn => btn.classList.remove("active"));
+                button.classList.add("active");
+
+                // Filter items
+                const category = button.getAttribute("data-category");
+                foodItems.forEach(item => {
+                    if (category === "all" || item.getAttribute("data-category") === category) {
+                        item.style.display = "block";
+                    } else {
+                        item.style.display = "none";
+                    }
+                });
+            });
+        });
+    });
+</script>
+{% endblock content %}
